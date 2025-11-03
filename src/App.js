@@ -15,7 +15,7 @@ function App() {
       <section id="Algos">
         <div className="section__vid-container">
           <video 
-            loop autoPlay muted
+            loop
             src={`${process.env.PUBLIC_URL}/Bubble Sort.mp4`}
             controls
             width="640"
