@@ -124,3 +124,8 @@ section {
 .section-container {
   display: flex;
 }
+
+.summary {
+  margin: 5vh 20vh;
+}
+
