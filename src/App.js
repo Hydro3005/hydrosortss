@@ -7,6 +7,7 @@ function App() {
       <img
         src={`${process.env.PUBLIC_URL}/HydroSORTS.png`}
         alt="HydroSorts Logo"
+        title="HydroSorts - BubbleSort"
         style={{ width: "150px", marginBottom: "20px" }}
       />
       <h1>HydroSorts</h1>
@@ -14,7 +15,7 @@ function App() {
       <section id="Algos">
         <div className="section__vid-container">
           <video 
-            src="/BubbleSort/mp4"
+            src="/public/BubbleSort.mp4"
             controls
             width="640"
             height="360"
