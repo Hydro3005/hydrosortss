@@ -14,7 +14,8 @@ function App() {
       <p>Algorithm Visualizer coming to your endz soon...</p>
       <section id="Algos">
         <div className="section__vid-container">
-          <video loop 
+          <video 
+            loop autoPlay muted
             src={`${process.env.PUBLIC_URL}/Bubble Sort.mp4`}
             controls
             width="640"
