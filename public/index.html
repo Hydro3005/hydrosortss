@@ -32,4 +32,18 @@
 
     </section>
   </body>
+  <script>
+  // Select the navbar
+  const nav = document.querySelector('nav');
+
+  // Listen for mouse movement
+  document.addEventListener('mousemove', (e) => {
+    if (e.clientY <= 50) { 
+      // Mouse is within top 50px of the viewport
+      nav.style.top = '0'; // show navbar
+    } else {
+      nav.style.top = '-17vh'; // hide navbar
+    }
+  });
+</script
 </html>
