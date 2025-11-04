@@ -127,7 +127,7 @@ section {
 
 /* MINECRAFT BG */
 body {
-  background-image: url('C:\Users\Armaan\Desktop\hydrosorts\public\faithful.png');
+  background-image: url('/public/faithful.png');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
