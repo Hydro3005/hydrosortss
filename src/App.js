@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import bubbleSortCode from './bubblesort';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       />
       <h1>HydroSorts</h1>
       <p>Algorithm Visualizer coming to your endz soon...</p>
-      <section id="Algos">
+      <section id="bubbleSort">
+        <h1 class="sortTitle">Bubble Sort Algorithm</h1>
         <div className="section__vid-container">
           <video 
             loop
@@ -22,6 +24,30 @@ function App() {
             height="360"
           />
         </div>
+
+        <p class="summary">Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. 
+          This algorithm is not suitable for large data sets as its average and worst-case time complexity are quite high.
+        </p>
+
+        <p class="summary">
+          We sort the array using multiple passes. After the first pass, the maximum element goes to end (its correct position). 
+          Same way, after second pass, the second largest element goes to second last position and so on.
+        </p>
+
+        <p class="summary">
+          In every pass, we process only those elements that have already not moved to correct position. 
+          After k passes, the largest k elements must have been moved to the last k positions.
+        </p>
+
+        <p class="summary">
+          In a pass, we consider remaining elements and compare all adjacent and swap if larger element is before a smaller element. 
+          If we keep doing this, we get the largest (among the remaining elements) at its correct position.
+        </p>
+
+        <div class="codeBlock">
+          <pre><code>{bubbleSortCode}</code></pre>
+        </div>
+
       </section>
       <section id="Selection Sort">
         <h1>Selection Sort</h1>

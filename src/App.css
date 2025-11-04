@@ -42,7 +42,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Press Start 2P', sans-serif;
   padding-top: 17vh; /* same as navbar height so content isn't hidden */
 }
 
@@ -161,7 +161,36 @@ section {
   display: flex;
 }
 
-.summary {
-  margin: 5vh 20vh;
+.sortTitle{
+  margin: 15px;
+} 
+
+.summary{
+  margin: 20px 110px 20px 110px;
+  font-size: 15px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.855);
+}
+
+.codeBlock {
+  margin: 20px 110px;
+  background-color: #2e2e2e;
+  color: #fff;
+  text-align: left;
+  padding: 15px;
+  border-radius: 8px;
+
+  /* 👇 Add or modify these three lines */
+  white-space: pre-wrap;   /* keep line breaks but allow wrapping */
+  word-wrap: break-word;   /* break long lines instead of scrolling */
+  overflow-x: hidden;      /* remove the horizontal scrollbar */
+
+  font-family: 'Courier New', monospace; /* monospace for code look */
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.codeBlock pre {
+  margin: 0; /* remove extra spacing inside pre */
 }
 
