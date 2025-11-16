@@ -3,65 +3,65 @@ import bubbleSortCode from './bubblesort';
 
 function App() {
   return (
-    <div style={{ textAlign: "center", marginTop: "40px" }}>
-      <img
-        src={`${process.env.PUBLIC_URL}/HydroSORTS.png`}
-        alt="HydroSorts Logo"
-        title="HydroSorts - BubbleSort"
-        style={{ width: "150px", marginBottom: "20px" }}
-      />
-      <h1>HydroSorts</h1>
-      <p>Algorithm Visualizer coming to your endz soon...</p>
-      <section id="bubbleSort">
-        <h1 class="sortTitle">Bubble Sort Algorithm</h1>
-        <div className="section__vid-container">
-          <video 
-            loop
-            src={`${process.env.PUBLIC_URL}/Bubble Sort.mp4`}
-            controls
-            width="640"
-            height="360"
-          ></video>
-        </div>
+    <div className="app-container">
 
-        <p class="summary">Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. 
-          This algorithm is not suitable for large data sets as its average and worst-case time complexity are quite high.
-        </p>
+      {/* Sidebar Navigation */}
+      <div className="sidebar">
+        <a href="#bubbleSort">Bubble Sort</a>
+        <a href="#selectionSort">Selection Sort</a>
+      </div>
 
-        <p class="summary">
-          We sort the array using multiple passes. After the first pass, the maximum element goes to end (its correct position). 
-          Same way, after second pass, the second largest element goes to second last position and so on.
-        </p>
 
-        <p class="summary">
-          In every pass, we process only those elements that have already not moved to correct position. 
-          After k passes, the largest k elements must have been moved to the last k positions.
-        </p>
 
-        <p class="summary">
-          In a pass, we consider remaining elements and compare all adjacent and swap if larger element is before a smaller element. 
-          If we keep doing this, we get the largest (among the remaining elements) at its correct position.
-        </p>
+      {/* Main Content */}
+      <main className="main-content">
+        <header>
+          <img
+            src={`${process.env.PUBLIC_URL}/HydroSORTS.png`}
+            alt="HydroSorts Logo"
+            title="HydroSorts"
+          />
+          <h1>HydroSorts</h1>
+          <p>Algorithm Visualizer coming to your endz soon...</p>
+        </header>
 
-        <div class="codeBlock">
-          <pre><code>{bubbleSortCode}</code></pre>
-        </div>
+        {/* Bubble Sort Section */}
+        <section id="bubbleSort">
+          <h2 className="sortTitle">Bubble Sort Algorithm</h2>
+          <div className="section__vid-container">
+            <video 
+              loop
+              src={`${process.env.PUBLIC_URL}/Bubble Sort.mp4`}
+              controls
+            ></video>
+          </div>
+          <div className="summary">
+            <p>Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping adjacent elements if they are in the wrong order.</p>
+            <p>This algorithm is not suitable for large data sets as its average and worst-case time complexity are quite high.</p>
+            <p>After each pass, the largest elements are moved to their correct positions.</p>
+            <p>We continue passes until the array is sorted.</p>
+          </div>
+          <div className="codeBlock">
+            <pre><code>{bubbleSortCode}</code></pre>
+          </div>
+        </section>
 
-      </section>
-      <section id="Selection Sort">
-        <h1>Selection Sort</h1>
-          <video
-            loop
-            src={`${process.env.PUBLIC_URL}/Selection Sort.mp4`}
-            controls
-            width="640"
-            height="360"
-          ></video>
-          <p class='summary'>A selection sort algorithm uses comparisons to sort through an array. It will repeatedly select the largest or smallest element in the unsorted part of the array and switches it with the first unsorted item.</p>
-          <p class='summary'>It starts by looking for the smallest or largest (in this case, smallest) element and then swaps it for the first element.</p>
-          <p class='summary'>Then, it will look through the remaining elements that have not been sorted, and swap it with the second element.</p>
-          <p class='summary'>This is repeated until the array is fully sorted.</p>
-      </section>
+        {/* Selection Sort Section */}
+        <section id="selectionSort">
+          <h2 className="sortTitle">Selection Sort Algorithm</h2>
+          <div className="section__vid-container">
+            <video
+              loop
+              src={`${process.env.PUBLIC_URL}/Selection Sort.mp4`}
+              controls
+            ></video>
+          </div>
+          <div className="summary">
+            <p>Selection Sort repeatedly selects the smallest element from the unsorted portion and swaps it into its correct position.</p>
+            <p>It continues this process until the array is fully sorted.</p>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }

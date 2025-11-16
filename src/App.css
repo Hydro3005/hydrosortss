@@ -1,139 +1,18 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Reset and Fonts */
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: 'Press Start 2P', sans-serif;
-  padding-top: 17vh; /* same as navbar height so content isn't hidden */
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-p {
-  color: rgb(85, 85, 85);
-}
-
-/* TRANSITION */
-
-a,
-.btn {
-  transition: all 300ms ease;
-}
-
-/* ===================== NAVBAR ===================== */
-nav {
-  position: fixed;       /* stays at the top */
-  top: -17vh;
-  left: 0;
-  width: 100%;           /* full width */
-  height: 17vh;          /* your original height */
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-family: 'Press Start 2P', sans-serif;
-  transition: top 0.5s ease-in-out;
-
-  z-index: 1000;         /* ensures navbar is above content */
-}
-body:hover nav,
-nav:hover{
-  top: 0
-}
-
-/* NAV LINKS */
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  font-size: 1.5rem;
-}
-
-a {
-  color: white;           /* better visibility over dark background */
-  text-decoration: none;
-  transition: all 300ms ease;
-}
-
-a:hover {
-  color: #61dafb;
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-}
-
-/* LOGO */
-.logo {
-  font-family: 'MedievalSharp', cursive;
-  font-size: 2rem;
-  color: white;
-}
-
-.logo:hover {
-  cursor: default;
-}
-/* SECTIONS */
-
-section {
-  padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
   box-sizing: border-box;
-  min-height: fit-content;
 }
 
-.section-container {
-  display: flex;
-}
-
-/* MINECRAFT BG */
 body {
+  font-family: 'Press Start 2P', sans-serif;
+  padding-top: 17vh; /* leave space for navbar */
   background-image: url('/public/faithful.png');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   position: relative;
-  margin: 0;
-  height: 100vh;
 }
 
 body::before {
@@ -143,54 +22,152 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75); /* black overlay at 50% opacity */
-  z-index: -1; /* keeps it behind content */
+  background-color: rgba(0,0,0,0.75);
+  z-index: -1;
 }
 
-/* SECTIONS */
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
+/* Navbar */
+nav {
+  position: fixed;
+  top: -17vh;
+  left: 0;
+  width: 100%;
+  height: 17vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Press Start 2P', sans-serif;
+  transition: top 0.5s ease-in-out;
+  z-index: 1000;
+  background: rgba(0,0,0,0);
+}
+body:hover nav,
+nav:hover {
+  top: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: all 300ms ease;
+}
+
+.nav-links a:hover {
+  color: #61dafb;
+  text-decoration: underline;
+}
+
+.logo {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 2rem;
+  color: white;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 20vh;
+  right: 2vw;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  font-family: 'Press Start 2P', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+.sidebar a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 4vh 5vw;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+/* Sections */
 section {
-  padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
-  box-sizing: border-box;
+  margin: 4vh 0;
+  padding: 2vh 0;
   min-height: fit-content;
 }
 
-.section-container {
-  display: flex;
+.sortTitle {
+  margin-bottom: 15px;
+  color: #fff;
 }
 
-.sortTitle{
-  margin: 15px;
-} 
-
-.summary{
-  margin: 20px 110px 20px 110px;
-  font-size: 15px;
+/* Summary & Code */
+.summary {
+  margin: 20px 0;
+  font-size: 1rem;
+  line-height: 1.6;
   text-align: left;
-  color: rgba(255, 255, 255, 0.855);
+  color: rgba(255,255,255,0.9);
 }
 
 .codeBlock {
-  margin: 20px 110px;
-  background-color: #2e2e2e;
-  color: #fff;
-  text-align: left;
+  margin: 20px 0;
   padding: 15px;
   border-radius: 8px;
-
-  /* 👇 Add or modify these three lines */
-  white-space: pre-wrap;   /* keep line breaks but allow wrapping */
-  word-wrap: break-word;   /* break long lines instead of scrolling */
-  overflow-x: hidden;      /* remove the horizontal scrollbar */
-
-  font-family: 'Courier New', monospace; /* monospace for code look */
-  font-size: 15px;
+  background-color: #2e2e2e;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
   line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
 }
 
-.codeBlock pre {
-  margin: 0; /* remove extra spacing inside pre */
+/* Video */
+.section__vid-container {
+  text-align: center;
+  margin: 20px 0;
 }
 
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
