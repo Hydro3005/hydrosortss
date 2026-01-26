@@ -1,5 +1,6 @@
 import './App.css';
 import bubbleSortCode from './bubblesort';
+import SelectionSortCode from './selectionsort';
 
 function App() {
   return (
@@ -10,8 +11,6 @@ function App() {
         <a href="#bubbleSort">Bubble Sort</a>
         <a href="#selectionSort">Selection Sort</a>
       </div>
-
-
 
       {/* Main Content */}
       <main className="main-content">
@@ -59,6 +58,9 @@ function App() {
           <div className="summary">
             <p>Selection Sort repeatedly selects the smallest element from the unsorted portion and swaps it into its correct position.</p>
             <p>It continues this process until the array is fully sorted.</p>
+          </div>
+          <div class="codeBlock">
+            <pre><code>{SelectionSortCode}</code></pre>
           </div>
         </section>
       </main>
